@@ -106,8 +106,15 @@ $(function () {
   });
 });
 
+var settings = {
+  url: "https://api.coinstats.app/public/v1/coins?skip=0&limit=10",
+  method: "GET",
+  timeout: 0,
+};
 
-
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 
 // var getCrypto = (searchValue) => {
 //   fetch(`https://api.coinstats.app/public/v1/markets?coinId=${searchValue}`)
