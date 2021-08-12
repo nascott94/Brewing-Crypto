@@ -106,6 +106,34 @@ $(function () {
   });
 });
 
+$(document).ready(function () {
+  var searchValue = "";
+  $("#cryptoButton").on("click", function (event) {
+    console.log(event);
+    searchValue = $("#tags").val();
+
+    var requestURL = `https://api.coinstats.app/public/v1/markets?coinId=${searchValue}`;
+
+    $.ajax({
+      url: requestURL,
+      method: "GET",
+    }).then(function (data) {
+      console.log(data);
+      var results = $("#cryptoResultsList");
+      data.forEach(function (crypto) {
+        saveToStorage(crypto);
+        var cryptoItem = $(`
+          <li>Name: ${searchValue} </li>
+          <li>Price: ${crypto.price} </li>
+          <li>Exchange: ${crypto.exchange} </li>
+          <li>Volume: ${crypto.volume} </li> 
+          <br>
+        `);
+        results.append(cryptoItem);
+      });
+    });
+  });
+});
 
 var settings = {
   url: "https://api.coinstats.app/public/v1/coins?skip=0&limit=10",
