@@ -107,29 +107,12 @@ $(function () {
 });
 
 
+var settings = {
+  url: "https://api.coinstats.app/public/v1/coins?skip=0&limit=10",
+  method: "GET",
+  timeout: 0,
+};
 
-
-// var getCrypto = (searchValue) => {
-//   fetch(`https://api.coinstats.app/public/v1/markets?coinId=${searchValue}`)
-//     .then((res) => res.json())
-//     .then((data) => {
-//       console.log(data);
-//     })
-
-//     .catch((err) => console.log(err));
-// };
-
-// getCrypto("bitcoin");
-
-// var requestOptions = {
-//   method: "GET",
-//   redirect: "follow",
-// };
-
-// fetch(
-//   "https://api.coinstats.app/public/v1/markets?coinId=bitcoin",
-//   requestOptions
-// )
-//   .then((response) => response.text())
-//   .then((result) => console.log(result))
-//   .catch((error) => console.log("error", error));
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
