@@ -106,6 +106,7 @@ $(function () {
   });
 });
 
+
 var settings = {
   url: "https://api.coinstats.app/public/v1/coins?skip=0&limit=10",
   method: "GET",

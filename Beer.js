@@ -1,32 +1,52 @@
-var getBeer = (searchValue, brewtype) => {
-  fetch(
-    `https://api.openbrewerydb.org/breweries?by_postal=${searchValue}&by_type=${brewtype}`,
-  )
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data)
-    })
+//VAR Declarations
 
-    .catch((err) => console.log(err))
-}
+$(document).ready(function () {
+  //FUNCTIONS
+  var searchValue = "";
 
-getBeer('49503', 'brewpub')
+  //EVENT HANDLERS
+  $("#buttonbrew").on("click", function (event) {
+    // event.preventDefault();
+    console.log(event);
+    // console.log("i am clicked");
+    //Need to grab value of input field for user
+    searchValue = $("#searchbrew").val();
 
-// // From Review
+    // console.log(userInput);
 
-// $(document).ready(function() {
+    // Make API call to breweryAPI
 
-// //API ENDPOINT
-// var requestURL = "https://api.openbrewerydb.org";
+    var requestURL = `https://api.openbrewerydb.org/breweries?by_postal=${searchValue}`;
 
-// }
-// //fetch function - built into all modern day browsers
-// //ajax method in jquery
+    $.ajax({
+      url: requestURL,
+      method: "GET",
+    }).then(function (data) {
+      console.log(data);
+      var results = $("#beerResultsList");
+      data.forEach(function (brewery) {
+        saveToStorage(brewery);
+        var beerItem = $(`
+          <li>City: ${brewery.city}</li>
+          <li>Brewery: ${brewery.name}</li>
+          <li>Website: ${brewery.website_url}</li>
+          <br>
+        `);
+        results.append(beerItem);
+      });
+    });
+  });
 
-// //Promis Object - returns us a promise object --Unfulfilled, resolved
-// $.ajax({
-//   url: requestURL,
-//   method: 'GET'
-// }).then(function() {
-//   console.log(data);
-// });
+  function saveToStorage(brewery) {
+    var itemsFromStorage = localStorage.getItem("breweries");
+    if (itemsFromStorage) {
+      console.log("items exist!");
+      var stuffFromStorage = JSON.parse(itemsFromStorage);
+      stuffFromStorage.push(brewery);
+      localStorage.setItem("breweries", JSON.stringify(stuffFromStorage));
+    } else {
+      console.log("no items exist!");
+      localStorage.setItem("breweries", JSON.stringify([brewery]));
+    }
+  }
+});
