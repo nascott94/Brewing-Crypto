@@ -123,6 +123,7 @@ $(document).ready(function () {
       console.log(data);
       var results = $("#cryptoResultsList");
       data.forEach(function (crypto) {
+        saveToStorage(crypto);
         var cryptoItem = $(`
           <li>Price: ${crypto.price} </li>
           <li>Exchange: ${crypto.exchange} </li>
@@ -133,4 +134,17 @@ $(document).ready(function () {
       });
     });
   });
+
+  function saveToStorage(crypto) {
+    var itemsFromStorage = localStorage.getItem("crypto");
+    if (itemsFromStorage) {
+      console.log("crypto Items Exist");
+      var stuffFromStorage = JSON.parse(itemsFromStorage);
+      stuffFromStorage.push(crypto);
+      localStorage.setItem("crypto", JSON.stringify(stuffFromStorage));
+    } else {
+      console.log("no items exist!");
+      localStorage.setItem("crypto", JSON.stringify([crypto]));
+    }
+  }
 });
