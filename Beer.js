@@ -1,16 +1,16 @@
 //VAR Declarations
-var by_postal = "";
-var searchValue = "";
 
 $(document).ready(function () {
   //FUNCTIONS
+  var searchValue = "";
 
   //EVENT HANDLERS
   $("#buttonbrew").on("click", function (event) {
-    event.preventDefault();
+    // event.preventDefault();
+    console.log(event);
     // console.log("i am clicked");
     //Need to grab value of input field for user
-    var searchValue = $("#searchbrew").val();
+    searchValue = $("#searchbrew").val();
 
     // console.log(userInput);
 
@@ -23,18 +23,30 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (data) {
       console.log(data);
-      var results = $("#beerresults");
-      $(data).each(function (i) {
-        var listBeer = $(`
-          <ul>
-          <li>City: ${data.by_postal}</li>
-          <li>Brewery: ${data.brewery_type}</li>
-          </ul>
+      var results = $("#beerResultsList");
+      data.forEach(function (brewery) {
+        saveToStorage(brewery);
+        var beerItem = $(`
+          <li>City: ${brewery.city}</li>
+          <li>Brewery: ${brewery.name}</li>
+          <li>Website: ${brewery.website_url}</li>
+          <br>
         `);
-        $("#beerresults").append(listBeer);
+        results.append(beerItem);
       });
-      //   $("#beerresults").append("<div>", "</div>");
-      //   console.log(data);
     });
   });
+
+  function saveToStorage(brewery) {
+    var itemsFromStorage = localStorage.getItem("breweries");
+    if (itemsFromStorage) {
+      console.log("items exist!");
+      var stuffFromStorage = JSON.parse(itemsFromStorage);
+      stuffFromStorage.push(brewery);
+      localStorage.setItem("breweries", JSON.stringify(stuffFromStorage));
+    } else {
+      console.log("no items exist!");
+      localStorage.setItem("breweries", JSON.stringify([brewery]));
+    }
+  }
 });
