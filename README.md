@@ -24,9 +24,9 @@ The web application allows users to join subscribe to a community of fellow cryp
 
 ## Contributers
 
-K'trina Apodaca
-Daniel Possehl
-Andy McInally
+K'trina Apodaca,
+Daniel Possehl,
+Andy McInally and
 Natalie Scott
 
 ## Contact
