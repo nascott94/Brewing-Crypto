@@ -27,7 +27,8 @@ $(document).ready(function () {
       data.forEach(function (brewery) {
         saveToStorage(brewery);
         var beerItem = $(`
-          <li>City: ${brewery.city}</li>
+          <br
+          <li>Address: ${brewery.street}</li>
           <li>Brewery: ${brewery.name}</li>
           <li>Website: ${brewery.website_url}</li>
           <br>
