@@ -31,3 +31,14 @@
   padding: 20px 0;
   font-size: 30px;
 }
+
+/* DANS TOP 100 SEARCEHD COINS */
+
+input {
+  padding: 7px;
+  height: 40px;
+}
+
+fieldset {
+  margin-bottom: 20px;
+}
