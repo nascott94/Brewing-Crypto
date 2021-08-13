@@ -148,3 +148,30 @@ $(document).ready(function () {
     }
   }
 });
+
+// DANS TOP 100 CRYPTO JS
+
+const inpkey = document.getElementById("inpKey");
+const inpValue = document.getElementById("inpValue");
+const btnInsert = document.getElementById("btnInsert");
+const lsOutput = document.getElementById("lsOutput");
+
+btnInsert.onclick = function () {
+  const key = inpkey.value;
+  const valueOne = inpValue.value;
+
+  console.log(key);
+  console.log(valueOne);
+
+  if (key && valueOne) {
+    localStorage.setItem(key, valueOne);
+    location.reload();
+  }
+};
+
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  const value = localStorage.getItem(key);
+
+  lsOutput.innerHTML += `${key}: ${value}<br/>`;
+}
