@@ -110,12 +110,12 @@
             <div style="height:120px;width:615px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;"  id="beerresults">
 
               <ul id = "beerResultsList"></ul>
-            </div>
-          </div>
         </div>
-          <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-          <div class="col-md-5 p-lg-5 mx-auto my-5 searchresults">    
-            <h2>Search for Crypto Coins
+      </div>
+    </div>
+      <!-- <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5 searchresults">    
+          <h2>Search for Crypto Coins
             </h2>
             <p>
               Type in a type of coin to see current price and volume!
@@ -129,14 +129,36 @@
                 </div>
 
                   <!--DANS TOP 100 COIN BOX HTML  -->
+    <fieldset>
+      <legend>Your Most Searched Coins!</legend>
+      <div id="lsOutput"></div>
+    </fieldset>
+            </div>
+          </div>
+        </div>
+      </div> 
 
-    <!-- <fieldset>
-      <legend>Not sure yet!</legend>
-      <input id="inpKey" type="text" placeholder="EnterKey" />
-      <input id="inpValue" type="text" placeholder="Entervalue" />
-      <button type="button" id="btnInsert">Press Me</button>
-    </fieldset> -->
 
+<div class="newcryptodiv">
+
+  <p>
+    
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5 searchresults">    
+          <h2>Search for Crypto Coins
+            </h2>
+            <p>
+              Type in a type of coin to see current price and volume!
+            </p>
+            <div class="ui-widget">
+              <label for="tags">Tags: </label>
+              <input type="text" id="tags" placeholder="Search">
+              <button class="btn btn-outline-secondary" type="button" id="cryptoButton">Search</button>
+                <div  style=" height:120px;width:615px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;"  id="cryptoResults">
+                  <ul id= "cryptoResultsList"></ul>
+                </div>
+
+                  <!--DANS TOP 100 COIN BOX HTML  -->
     <fieldset>
       <legend>Your Most Searched Coins!</legend>
       <div id="lsOutput"></div>
@@ -145,7 +167,10 @@
           </div>
         </div>
       </div>
+  </p>
 
+
+</div>      
 
   <!-- The Modal subsribe -->
     <div id="myModalsubscribe" class="modal">
