@@ -45,12 +45,12 @@
 
       <div id="signbttn" class="d-flex text-align-right">
         <a href="#">
-        <button type="button" class="btn btn-secondary px-4 me-2">
+        <button id="modalbuttonlogin" type="button" class="btn btn-secondary px-4 me-2">
           Login
         </button>
         </a>
         <a hred="#">
-        <button type="button" class="btn btn-secondary me-3" data-toggle="modal" data-target="myModal">
+        <button id="modalbuttonsubscribe" type="button" class="btn btn-secondary me-3" data-toggle="modal" data-target="myModal">
           Subscribe
         </button>
         </a>
@@ -102,6 +102,9 @@
             <button class="btn btn-outline-secondary" id="buttonbrew" type="button">Search</button>
             <div id="beerresults">
               <br>
+
+            <div style="height:120px;width:615px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;"  id="beerresults">
+
               <ul id = "beerResultsList"></ul>
             </div>
           </div>
@@ -123,12 +126,12 @@
 
                   <!--DANS TOP 100 COIN BOX HTML  -->
 
-    <fieldset>
+    <!-- <fieldset>
       <legend>Not sure yet!</legend>
       <input id="inpKey" type="text" placeholder="EnterKey" />
       <input id="inpValue" type="text" placeholder="Entervalue" />
       <button type="button" id="btnInsert">Press Me</button>
-    </fieldset>
+    </fieldset> -->
 
     <fieldset>
       <legend>Your Most Searched Coins!</legend>
@@ -142,6 +145,42 @@
           </div>
         </div>
       </div>
+
+
+  <!-- The Modal subsribe -->
+    <div id="myModalsubscribe" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div>
+          <fieldset>
+            <legend>Sign up!</legend>
+            <input id="First-Name" type="text" placeholder="First Name" />
+            <input id="Last-Name" type="text" placeholder="Last Name" />
+            <button type="button" id="btnInsert">SUBSCRIBE</button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+
+      <!-- The Modal login -->
+    <div id="myModallogin" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div>
+          <fieldset>
+            <legend>Sign up!</legend>
+            <input id="First-Name" type="text" placeholder="First Name" />
+            <input id="Last-Name" type="text" placeholder="Last Name" />
+            <button type="button" id="btnInsert">SUBSCRIBE</button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+
   </main>
   <footer>
     
@@ -153,5 +192,6 @@
   <script src="./crypto.js"></script>
   <script src="./Beer.js"></script>
 </body>
+
 
 </html>
