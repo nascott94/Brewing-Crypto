@@ -111,9 +111,9 @@ $(document).ready(function () {
   $("#cryptoButton").on("click", function (event) {
     console.log(event);
     searchValue = $("#tags").val();
-    console.log(searchValue);
-
-    var requestURL = `https://api.coinstats.app/public/v1/markets?coinId=${searchValue}`;
+    saveToStorage(searchValue);
+    displaycoinsfromstorage();
+    var requestURL = `https://api.coinstats.app/public/v1/markets?skip=0&coinId=${searchValue}`;
     console.log(requestURL);
 
     $.ajax({
@@ -123,7 +123,7 @@ $(document).ready(function () {
       console.log(data);
       var results = $("#cryptoResultsList");
       data.forEach(function (crypto) {
-        saveToStorage(crypto);
+        // saveToStorage(crypto);
         var cryptoItem = $(`
           <li>Price: ${crypto.price} </li>
           <li>Exchange: ${crypto.exchange} </li>
@@ -138,7 +138,7 @@ $(document).ready(function () {
   function saveToStorage(crypto) {
     var itemsFromStorage = localStorage.getItem("crypto");
     if (itemsFromStorage) {
-      console.log("crypto Items Exist");
+      // console.log("crypto Items Exist");
       var stuffFromStorage = JSON.parse(itemsFromStorage);
       stuffFromStorage.push(crypto);
       localStorage.setItem("crypto", JSON.stringify(stuffFromStorage));
@@ -151,27 +151,38 @@ $(document).ready(function () {
 
 // DANS TOP 100 CRYPTO JS
 
-const inpkey = document.getElementById("inpKey");
-const inpValue = document.getElementById("inpValue");
-const btnInsert = document.getElementById("btnInsert");
-const lsOutput = document.getElementById("lsOutput");
+// const inpkey = document.getElementById("inpKey");
+// const inpValue = document.getElementById("inpValue");
+// const btnInsert = document.getElementById("btnInsert");
+// const lsOutput = document.getElementById("lsOutput");
 
-btnInsert.onclick = function () {
-  const key = inpkey.value;
-  const valueOne = inpValue.value;
+// btnInsert.onclick = function () {
+//   const key = inpkey.value;
+//   const valueOne = inpValue.value;
 
-  console.log(key);
-  console.log(valueOne);
+//   console.log(key);
+//   console.log(valueOne);
 
-  if (key && valueOne) {
-    localStorage.setItem(key, valueOne);
-    location.reload();
+//   if (key && valueOne) {
+//     localStorage.setItem(key, valueOne);
+//     location.reload();
+//   }
+// };
+
+// for (let i = 0; i < localStorage.length; i++) {
+//   const key = localStorage.key(i);
+//   const value = localStorage.getItem(key);
+
+//   lsOutput.innerHTML += `${key}: ${value}<br/>`;
+// }
+
+function displaycoinsfromstorage() {
+  var storageitems = JSON.parse(localStorage.getItem("crypto"));
+  const lsOutput = document.getElementById("lsOutput");
+  lsOutput.innerHTML = "";
+  for (var i = 0; i < storageitems.length; i++) {
+    var pTag = document.createElement("p");
+    pTag.innerText = storageitems[i];
+    lsOutput.prepend(pTag);
   }
-};
-
-for (let i = 0; i < localStorage.length; i++) {
-  const key = localStorage.key(i);
-  const value = localStorage.getItem(key);
-
-  lsOutput.innerHTML += `${key}: ${value}<br/>`;
 }
