@@ -25,6 +25,12 @@ fieldset {
   margin-bottom: 20px;
 }
 
+.newcryptodiv {
+  height: 600px;
+  background-color: white;
+  width: 100%;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */

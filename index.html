@@ -8,7 +8,7 @@
   <title>Brewing Crypto</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,16 +121,13 @@
             <div style="height:120px;width:615px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;"  id="beerresults">
 
               <ul id = "beerResultsList"></ul>
-            </div>
-          </div>
         </div>
-          <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+      </div>
+    </div>
+      <!-- <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5 searchresults">    
+          <h2>Search for Crypto Coins
 
-          <div id="cryptoSection" class="col-md-5 p-lg-5 mx-auto my-5">    
-
-          <div class="col-md-5 p-lg-5 mx-auto my-5 searchresults">    
-
-            <h2>Search for Crypto Coins
             </h2>
             <p>
               Type in a type of coin to see current price and volume!
@@ -144,14 +141,36 @@
                 </div>
 
                   <!--DANS TOP 100 COIN BOX HTML  -->
+    <fieldset>
+      <legend>Your Most Searched Coins!</legend>
+      <div id="lsOutput"></div>
+    </fieldset>
+            </div>
+          </div>
+        </div>
+      </div> 
 
-    <!-- <fieldset>
-      <legend>Not sure yet!</legend>
-      <input id="inpKey" type="text" placeholder="EnterKey" />
-      <input id="inpValue" type="text" placeholder="Entervalue" />
-      <button type="button" id="btnInsert">Press Me</button>
-    </fieldset> -->
 
+<div class="newcryptodiv">
+
+  <p>
+    
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5 searchresults">    
+          <h2>Search for Crypto Coins
+            </h2>
+            <p>
+              Type in a type of coin to see current price and volume!
+            </p>
+            <div class="ui-widget">
+              <label for="tags">Tags: </label>
+              <input type="text" id="tags" placeholder="Search">
+              <button class="btn btn-outline-secondary" type="button" id="cryptoButton">Search</button>
+                <div  style=" height:120px;width:615px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;"  id="cryptoResults">
+                  <ul id= "cryptoResultsList"></ul>
+                </div>
+
+                  <!--DANS TOP 100 COIN BOX HTML  -->
     <fieldset>
       <legend>Your Most Searched Coins!</legend>
       <div id="lsOutput"></div>
@@ -160,7 +179,10 @@
           </div>
         </div>
       </div>
+  </p>
 
+
+</div>      
 
   <!-- The Modal subsribe -->
     <div id="myModalsubscribe" class="modal">
@@ -196,52 +218,57 @@
 
 
   </main>
+
+
+<footer class="bg-dark text-center text-white">
+
+  <div class="container p-4 pb-0">
+        </section>
+     <section class="mb-4">
+      <p>
+      READ: When subscribing you are agreeing to our Terms of Service for this site. This also means we are not liable for any coin loss, crypto arguements or outstanding bar tabs. Please use Brewing Crypto responsibly. Any questions or concerns please direct them to brewingcypto@gmail.com
+
+    </section>
+    
+    <section class="mb-4">
+    
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+    
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+     
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+   
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
  
-    <footer class="bg-dark text-center text-white">
-
-  <div class="container p-4 pb-0">
-        </section>
-     <section class="mb-4">
-      <p>
-      READ: When subscribing you are agreeing to our Terms of Service for this site. This also means we are not liable for any coin loss, crypto arguements or outstanding bar tabs. Please use Brewing Crypto responsibly. Any questions or concerns please direct them to brewingcypto@gmail.com
-
-    </section>
-    
-    <section class="mb-4">
-    
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
-
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
-
-    
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
-      ></a>
-
-     
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-instagram"></i
-      ></a>
-
-   
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-
- 
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-github"></i
-      ></a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+  </div>
 
 
-  </div>
+</footer>
 
-    
-  </footer>
+
+
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -249,6 +276,7 @@
   <script src="./crypto.js"></script>
   <script src="./Beer.js"></script>
 </body>
+
 
 
 </html>
