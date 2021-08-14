@@ -113,7 +113,7 @@ $(document).ready(function () {
     searchValue = $("#tags").val();
     saveToStorage(searchValue);
     displaycoinsfromstorage();
-    var requestURL = `https://api.coinstats.app/public/v1/markets?coinId=${searchValue}`;
+    var requestURL = `https://api.coinstats.app/public/v1/markets?skip=0&coinId=${searchValue}`;
     console.log(requestURL);
 
     $.ajax({
