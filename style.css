@@ -8,6 +8,11 @@ ul {
   font-size: 75px;
 }
 
+button, h1, h2 {
+  font-family: "Karla", sans-serif;
+}
+
+
 .searchresults {
   display: flex;
   flex-direction: column;
@@ -23,6 +28,11 @@ input {
 
 fieldset {
   margin-bottom: 20px;
+}
+
+legend {
+  font-family: "Karla", sans-serif;
+  
 }
 
 .newcryptodiv {
