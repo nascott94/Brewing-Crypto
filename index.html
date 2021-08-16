@@ -1,205 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brewing Crypto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"/>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;500&family=Karla:wght@200;300&display=swap" rel="stylesheet"/>
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarExample01"
-            aria-controls="navbarExample01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbar01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="#Home">Home</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="#aboutSection">About</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="#brewSection">Brewery</a>
-              </li>
-              <a class="nav-link" aria-current="page" href="#cryptoSection">Crypto</a>
-            </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brewing Crypto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;500&family=Karla:wght@200;300&display=swap" rel="stylesheet">
+</head>
 
-            <div id="signbttn" class="d-flex text-align-right">
-              <button type="button" class="btn btn-secondary px-5 me-1">
-                Chat
-              </button>
-              <a href="#">
-                <button id="modalbuttonlogin" type="button" class="btn btn-secondary px-4 me-2">
-                  Login
-                </button>
-              </a>
-              <a href="#">
-                <button id="modalbuttonsubscribe" type="button" class="btn btn-secondary me-3" data-toggle="modal" data-target="myModal">
-                  Subscribe
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div
-        id="picture"
-        class="p-5 text-center bg-image"
-        style="background-image: url('https://images.unsplash.com/photo-1627538993300-61f001db23e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80');
-          height: 70vh;">
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7)">
-          <div class="d-flex justify-content-center align-items-center h-300">
-            <div class="text-white">
-              <h1 class="mb-3">Brewing Crypto</h1>
-            </div>
-          </div>
+<body>
+  <header><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div id="Home" class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"    
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#Home">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#About">About</a>
+          </li>
+          <li class ="nav-item active">
+            <a class="nav-link" aria-current="page" href="#Brewery">Brewery</a>
+          </li>
+          <a class="nav-link" aria-current="page" href="#Crypto">Crypto</a>
+        </ul>
+        
+
+      <div id="signbttn" class="d-flex text-align-right">
+        <a href="#">
+        <button id="modalbuttonlogin" type="button" class="btn btn-secondary px-4 me-2">
+          Login
+        </button>
+        </a>
+        <a hred="#">
+        <button id="modalbuttonsubscribe" type="button" class="btn btn-secondary me-3" data-toggle="modal" data-target="myModal">
+          Subscribe
+        </button>
+        </a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div
+    id="picture"
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('https://images.unsplash.com/photo-1627538993300-61f001db23e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80');
+   height: 75vh;
+    "
+  >
+    <div id="About" class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+      <div class="d-flex justify-content-center align-items-center h-300">
+        <div class="text-white">
+          <h1 class="mb-3">Got Crypto</h1>
         </div>
       </div>
-    </header>
+    </div>
 
-    <main>
-      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-          <h1 class="display-4 fw-normal" id="aboutSection">About</h1>
-          <p class="lead fw-normal">Going to a Crypto meet-up? Brush up on your crypto skills and find a brewery near you to meet.</p>
-        </div>
-        <div class="product-device shadow-sm d-none d-md-block"></div>
-        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-      </div>
+  </div>
+  </div>
+</div>
+</header>
+  </div></header>
+ 
+
+  <main>
+    <div id="Brewery" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 fw-normal">About</h1>
+      <p class="lead fw-normal">Going to a Crypto meet-up? Brush up on your crypto skills and find a brewery near you.</p>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
       <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark">
-        <div class="col-md-5 p-lg-5 mx-auto my-5 text-white searchresults" id="brewSection"> 
-          <h2>Search for Breweries Below</h2>
-          <p>
-            Type in your zip code in the search bar below to find breweries near you!
-          </p>
-          <div>
-            <input type="text" placeholder="Search" id="searchbrew">
+        <div  class="col-md-5 p-lg-5 mx-auto my-5 text-white searchresults">
+          <!-- <div class="h-100 p-5 text-white bg-dark rounded-3"> -->
+            <h2>Search for Breweries Below</h2>
+            <p>
+              Type in your zip code in the search bar below to find breweries near you!
+            </p>
+           <div>
+            <input type="text" id="searchbrew" placeholder="Search">
             <button class="btn btn-outline-secondary" id="buttonbrew" type="button">Search</button>
-          </div>
-          <div id="beerresults">
-            <br>
+
+            </div>
+            <div id="beerresults">
+              <br>
+
             <div style="height:120px;width:615px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;"  id="beerresults">
-              <ul id="beerResultsList"></ul>
+
+              <ul id = "beerResultsList"></ul>
+        </div>
+      </div>
+    </div>
+      <!-- <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5 searchresults">    
+          <h2>Search for Crypto Coins
+            </h2>
+            <p>
+              Type in a type of coin to see current price and volume!
+            </p>
+            <div class="ui-widget">
+              <label for="tags">Tags: </label>
+              <input type="text" id="tags" placeholder="Search">
+              <button class="btn btn-outline-secondary" type="button" id="cryptoButton">Search</button>
+                <div  style=" height:120px;width:615px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;"  id="cryptoResults">
+                  <ul id= "cryptoResultsList"></ul>
+                </div>
+
+                  <!--DANS TOP 100 COIN BOX HTML  -->
+    <!-- <fieldset>
+      <legend>Your Most Searched Coins!</legend>
+      <div id="lsOutput"></div>
+    </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>  -->
+
+
+<div class="newcryptodiv">
+
+  <p>
+    
+        <div id="Crypto" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light cryptowrapper">
+        <div class="col-md-5 p-lg-5 mx-auto my-5 searchresults">    
+          <h2>Search for Crypto Coins
+            </h2>
+            <p>
+              Type in a type of coin to see current price and volume!
+            </p>
+            <div class="ui-widget">
+              <label for="tags">Tags: </label>
+              <input type="text" id="tags" placeholder="Search">
+              <button class="btn btn-outline-secondary" type="button" id="cryptoButton">Search</button>
+                <div  style=" margin: 1rem 0px; height:120px;width:615px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;"  id="cryptoResults">
+                  <ul id= "cryptoResultsList"></ul>
+                </div>
+
+                  <!--DANS TOP 100 COIN BOX HTML  -->
+    <fieldset>
+      <legend>Your Most Searched Coins!</legend>
+      <div style=" height:120px;width:615px;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="lsOutput"></div>
+    </fieldset>
             </div>
           </div>
         </div>
       </div>
+  </p>
 
-      <div class="newcryptodiv">
-        <p>
-          <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-            <div class="col-md-5 p-lg-5 mx-auto my-5 searchresults" id="cryptoSection">
-              <h2>Search for Crypto Coins</h2>
-              <p>
-                Type in a type of coin to see current price and volume!
-              </p>
-              <div class="ui-widget">
-                <label for="tags">Tags:</label>
-                <input type="text" id="tags" placeholder="Search">
-                <button class="btn btn-outline-secondary" type="button" id="cryptoButton">Search</button>
-                <br>
-                  <div style=" height:120px;width:615px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;"  id="cryptoResults">
-                    <ul id= "cryptoResultsList"></ul>
-                  </div>
-              </div>
-              <fieldset>
-                <legend>Your Most Searched Coins Below</legend>
-                <div id="lsOutput"></div>
-              </fieldset>
-            </div>
-          </div>
-        </p>
-      </div>
 
-        <!-- The Modal subsribe -->
-      <div id="myModalsubscribe" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div>
-            <fieldset>
-              <legend>Sign up</legend>
-              <input id="First-Name" type="text" placeholder="Email Address" />
-              <button type="button" id="btnInsert">SUBSCRIBE</button>
-            </fieldset>
-          </div>
+</div>      
+
+  <!-- The Modal subsribe -->
+    <div id="myModalsubscribe" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div>
+          <fieldset>
+            <legend>Sign up!</legend>
+            <input id="First-Name" type="text" placeholder="Email Address" />
+            <button type="button" id="btnInsert">SUBSCRIBE</button>
+          </fieldset>
         </div>
       </div>
+    </div>
 
 
-        <!-- The Modal login -->
-      <div id="myModallogin" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div>
-            <fieldset>
-              <legend>Login</legend>
-              <input id="First-Name" type="text" placeholder="Login ID" />
-              <input id="Last-Name" type="text" placeholder="Password" />
-              <button type="button" id="btnInsert">SUBSCRIBE</button>
-            </fieldset>
-          </div>
+      <!-- The Modal login -->
+    <div id="myModallogin" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div>
+          <fieldset>
+            <legend>Login!</legend>
+            <input id="First-Name" type="text" placeholder="Login ID" />
+            <input id="Last-Name" type="text" placeholder="Password" />
+            <button type="button" id="btnInsert">SUBSCRIBE</button>
+          </fieldset>
         </div>
       </div>
-    </main>
+    </div>
 
-    <footer class="bg-dark text-center text-white">
-      <div class="container p-4 pb-0">
-        <section class="mb-4">
-          <p>
-            READ: When subscribing you are agreeing to our Terms of Service for this site. This also means we are not liable for any coin loss, crypto arguements or outstanding bar tabs. Please use Brewing Crypto responsibly. Any questions or concerns please direct them to brewingcypto@gmail.com
-          </p>
-        </section>
-        <section class="mb-4">
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i class="fab fa-google"></i>
-          </a>
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i class="fab fa-github"></i>
-          </a>
-        </section>
-      </div>
-    </footer>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer">
-    </script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="./crypto.js"></script>
-    <script src="./Beer.js"></script>
-  </body>
+
+  </main>
+
+<footer class="bg-dark text-center text-white">
+
+  <div class="container p-4 pb-0">
+        </section>
+     <section class="mb-4">
+      <p>
+      READ: When subscribing you are agreeing to our Terms of Service for this site. This also means we are not liable for any coin loss, crypto arguments or outstanding bar tabs. Please use Brewing Crypto responsibly. Any questions or concerns please direct them to brewingcypto@gmail.com
+
+    </section>
+    
+    <section class="mb-4">
+    
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+    
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+     
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+   
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+ 
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+  </div>
+
+
+</footer>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="./crypto.js"></script>
+  <script src="./Beer.js"></script>
+</body>
+
+
+
 </html>
