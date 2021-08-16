@@ -182,7 +182,10 @@ function displaycoinsfromstorage() {
   lsOutput.innerHTML = "";
   for (var i = 0; i < storageitems.length; i++) {
     var pTag = document.createElement("p");
+    pTag.setAttribute("style", "text-transform: capitalize");
     pTag.innerText = storageitems[i];
     lsOutput.prepend(pTag);
   }
 }
+
+displaycoinsfromstorage();
