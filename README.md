@@ -12,6 +12,9 @@ The web application allows users to join subscribe to a community of fellow cryp
 4. Continue to scroll to the crypto search section and search for the coin you are looking for data on.
 5. Finally use the message board feature to share the brewery you would like to meet up at.
 
+## Preview
+![Screenshot of website](Screen Shot 2021-08-15 at 2.34.31 PM.png)
+
 ## Technologies Used
 
 - HTML
